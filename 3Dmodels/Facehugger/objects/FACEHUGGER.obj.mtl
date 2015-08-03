@@ -1,0 +1,32 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.187496374)
+
+newmtl Bone
+Kd 0.784314 0.784314 0.784314
+Ks 1 1 1
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl probeEXT
+Kd 0.921569 0.784314 0.521569
+Ks 1 1 1
+Ke 0 0 0
+d 0.5
+Ns 42.9025
+illum 2
+map_Kd images/probeEXT.png
+bump images/probeEXTbump.png
+map_bump images/probeEXTbump.png
+
+newmtl skin
+Kd 0.925 0.837941 0.692843
+Ks 1 1 1
+Ke 0 0 0
+d 1
+Ns 61.6225
+illum 2
+map_Ks Magnet1://lightwave/jenny/Images/headbasebump1.tga
+bump Magnet1:///lightwave/jenny/Images/headbasebump1.tga
+map_bump Magnet1:///lightwave/jenny/Images/headbasebump1.tga
+

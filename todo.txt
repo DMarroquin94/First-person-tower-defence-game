@@ -1,0 +1,55 @@
+Wear professional attire (remove the hat) - done - 
+-Discuss, in detail, the technologies you used along with what you learned during Capstone
+
+	*add a chat logger*
+	*proper gun cross hairs*
+	
+	*minimap*
+	
+
+-Bind Mouse Hover!?
+-Noise!
+	*intro and game over music*
+	*ingame music*
+	*ice tower noise*
+	*arrow tower noise*
+	*cannon tower noise*
+	*player noise*
+	*crawler noise*
+	*tank noise*
+	*grenade noise*
+	
+-fix start and ending shit thing loop
+
+-third person to first person and vise versa
+-models
+	*pistol*
+	*uzi*
+	*shotgun*
+-animation for shooting guns
+-refactor!!!
+-cannon tower grenades
+-fix screecher implementation 
+
+
+
+---------------------------- Done ----------------------------
+-Bind Mouse Keys!
+*reload time for all guns*
+-better skydome image
+*color scheme*
+
+---------------------------- talk ----------------------------
+Particle effects
+paths
+enemy unique paths 
+healthbars
+movement
+shooting down the middle
+colision
+
+
+three.js
+frames 
+3D
+3D models

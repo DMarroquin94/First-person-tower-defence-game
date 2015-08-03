@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Assimp</author>
+      <authoring_tool>Assimp Exporter</authoring_tool>
+    </contributor>
+    <created>2015-03-04T22:29:03</created>
+    <modified>2015-03-04T22:29:03</modified>
+    <unit name="meter" meter="1" />
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="m1probeEXT-diffuse-image">
+      <init_from>images/probeEXT.png</init_from>
+    </image>
+    <image id="m2skin-specular-image">
+      <init_from>Magnet1%3a//lightwave/jenny/Images/headbasebump1.tga</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="m0Bone-fx" name="m0Bone">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.784314   0.784314   0.784314   1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">1   1   1   1</color>
+            </specular>
+            <transparency>
+              <float sid="transparency">0</float>
+            </transparency>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m1probeEXT-fx" name="m1probeEXT">
+      <profile_COMMON>
+        <newparam sid="m1probeEXT-diffuse-surface">
+          <surface type="2D">
+            <init_from>m1probeEXT-diffuse-image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m1probeEXT-diffuse-sampler">
+          <sampler2D>
+            <source>m1probeEXT-diffuse-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m1probeEXT-diffuse-sampler" texcoord="CHANNEL0" />
+            </diffuse>
+            <specular>
+              <color sid="specular">1   1   1   1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">42.9025</float>
+            </shininess>
+            <transparency>
+              <float sid="transparency">0.5</float>
+            </transparency>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="m2skin-fx" name="m2skin">
+      <profile_COMMON>
+        <newparam sid="m2skin-specular-surface">
+          <surface type="2D">
+            <init_from>m2skin-specular-image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m2skin-specular-sampler">
+          <sampler2D>
+            <source>m2skin-specular-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0   0   0   1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.925   0.837941   0.692843   1</color>
+            </diffuse>
+            <specular>
+              <texture texture="m2skin-specular-sampler" texcoord="CHANNEL0" />
+            </specular>
+            <shininess>
+              <float sid="shininess">61.6225</float>
+            </shininess>
+            <transparency>
+              <float sid="transparency">0</float>
+            </transparency>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="m0Bone" name="m0Bone">
+      <instance_effect url="#m0Bone-fx"/>
+    </material>
+    <material id="m1probeEXT" name="m1probeEXT">
+      <instance_effect url="#m1probeEXT-fx"/>
+    </material>
+    <material id="m2skin" name="m2skin">
+      <instance_effect url="#m2skin-fx"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="meshId0" name="meshId0_name" >
+      <mesh>
+        <source id="meshId0-positions" name="meshId0-positions">
+          <float_array id="meshId0-positions-array" count="27"> 0 0.0012 0.0642 0 -0.0034 0.0642 0 -0.0076 0.0642 0 -0.0108 0.0642 0 -0.0136 0.0642 0 -0.0168 0.0642 0 -0.02 0.0642 0 -0.0222 0.0642 0 -0.0238 0.0642 </float_array>
+          <technique_common>
+            <accessor count="9" offset="0" source="#meshId0-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="meshId0-normals" name="meshId0-normals">
+          <float_array id="meshId0-normals-array" count="27"> 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 </float_array>
+          <technique_common>
+            <accessor count="9" offset="0" source="#meshId0-normals-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId0-vertices">
+          <input semantic="POSITION" source="#meshId0-positions" />
+          <input semantic="NORMAL" source="#meshId0-normals" />
+        </vertices>
+        <lines count="8" material="defaultMaterial">
+          <input offset="0" semantic="VERTEX" source="#meshId0-vertices" />
+          <p>1 0 2 1 3 2 4 3 5 4 6 5 7 6 8 7 </p>
+        </lines>
+      </mesh>
+    </geometry>
+    <geometry id="meshId1" name="meshId1_name" >
+      <mesh>
+        <source id="meshId1-positions" name="meshId1-positions">
+          <float_array id="meshId1-positions-array" count="333"> 0 0.006 0.0495 0 0.006 0.051 0 0.006 0.059 0 0.006 0.063 0 0.006 0.068 0 0.0045 0.073 0.0062 0.0007 0.0778 0.0062 0.0007 0.07815 0.006 0.0007 0.0936 0.006 0.0003 0.108 0.006 0.0003 0.1118 0.00602 0 0.1178 0.00602 0 0.11787 0.0092 -0.0001 0.0734 0.0098 -0.0001 0.0734 0.0248 -0.0001 0.0732 0.0396 -0.0001 0.0732 0.0434 -0.0001 0.0732 0.0501 0 0.0732 0.050158 0 0.0732 0.0105 5.58794e-11 0.069 0.011 5.58794e-11 0.06902 0.026 5.58794e-11 0.0692 0.041 5.58794e-11 0.0692 0.0448 5.58794e-11 0.0692 0.0513 0 0.0692 0.0514 0 0.0692 0.011 0.0001 0.0648 0.0113 0.0001 0.0648 0.0268 0.0001 0.0648 0.0418 0.0001 0.0647 0.0458 0.0001 0.0647 0.05225 0 0.0647 0.05229 0 0.0647 0.0075 5.58794e-11 0.056 0.012 -0.004 0.05 0 0.004 0.0448 0 0.004 0.0376 0 0.004 0.0306 0 0.004 0.0222 0 0.004 0.0146 0 0.004 0.0064 0 0.004 -0.0012 0 0.004 -0.008 0 0.004 -0.014 0 0.004 -0.0196 0 0.004 -0.025 0 0.004 -0.0306 0 0.0036 -0.0354 0 0.0036 -0.0406 0 0.0036 -0.0448 0 0.0036 -0.0486 0 0.0036 -0.0524 0 0.0036 -0.05615 0 0.0036 -0.05945 0 0.0036 -0.0629 0 0.0036 -0.066 0 0.0036 -0.0688 0 0.0036 -0.07145 0 0.0036 -0.0743 0 0.0036 -0.077 0 0.0036 -0.07955 0 0.0036 -0.082 0 0.0036 -0.08445 0 0.0036 -0.08675 0 0.0034 -0.0889 0 0.0034 -0.0911 0 0.0033 -0.09325 0 0.0033 -0.09576 0 0.0033 -0.0979 0 0.0033 -0.10006 0 0.0033 -0.10234 0 0.0033 -0.10494 0 0.0033 -0.10718 0 0.0033 -0.10875 0 0.0033 -0.10975 0 0.0033 -0.11053 0 0.0033 -0.11147 0 0.0033 -0.113 0 0.0033 -0.1146 0 0.0033 -0.11626 -0.0062 0.0007 0.0778 -0.0062 0.0007 0.07815 -0.006 0.0007 0.0936 -0.006 0.0003 0.108 -0.006 0.0003 0.1118 -0.00602 0 0.1178 -0.00602 0 0.11787 -0.0092 -0.0001 0.0734 -0.0098 -0.0001 0.0734 -0.0248 -0.0001 0.0732 -0.0396 -0.0001 0.0732 -0.0434 -0.0001 0.0732 -0.0501 0 0.0732 -0.050158 0 0.0732 -0.0105 5.58794e-11 0.069 -0.011 5.58794e-11 0.06902 -0.026 5.58794e-11 0.0692 -0.041 5.58794e-11 0.0692 -0.0448 5.58794e-11 0.0692 -0.0513 0 0.0692 -0.0514 0 0.0692 -0.011 0.0001 0.0648 -0.0113 0.0001 0.0648 -0.0268 0.0001 0.0648 -0.0418 0.0001 0.0647 -0.0458 0.0001 0.0647 -0.05225 0 0.0647 -0.05229 0 0.0647 -0.0075 5.58794e-11 0.056 -0.012 -0.004 0.05 </float_array>
+          <technique_common>
+            <accessor count="111" offset="0" source="#meshId1-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="meshId1-normals" name="meshId1-normals">
+          <float_array id="meshId1-normals-array" count="333"> 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 0 0 -0 </float_array>
+          <technique_common>
+            <accessor count="111" offset="0" source="#meshId1-normals-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId1-vertices">
+          <input semantic="POSITION" source="#meshId1-positions" />
+          <input semantic="NORMAL" source="#meshId1-normals" />
+        </vertices>
+        <lines count="110" material="defaultMaterial">
+          <input offset="0" semantic="VERTEX" source="#meshId1-vertices" />
+          <p>1 0 2 1 3 2 4 3 5 4 6 5 7 6 8 7 9 8 10 9 11 10 12 11 13 4 14 13 15 14 16 15 17 16 18 17 19 18 20 3 21 20 22 21 23 22 24 23 25 24 26 25 27 2 28 27 29 28 30 29 31 30 32 31 33 32 34 2 35 34 36 1 37 36 38 37 39 38 40 39 41 40 42 41 43 42 44 43 45 44 46 45 47 46 48 47 49 48 50 49 51 50 52 51 53 52 54 53 55 54 56 55 57 56 58 57 59 58 60 59 61 60 62 61 63 62 64 63 65 64 66 65 67 66 68 67 69 68 70 69 71 70 72 71 73 72 74 73 75 74 76 75 77 76 78 77 79 78 80 79 81 5 82 81 83 82 84 83 85 84 86 85 87 86 88 4 89 88 90 89 91 90 92 91 93 92 94 93 95 3 96 95 97 96 98 97 99 98 100 99 101 100 102 2 103 102 104 103 105 104 106 105 107 106 108 107 109 2 110 109 </p>
+        </lines>
+      </mesh>
+    </geometry>
+    <geometry id="meshId2" name="meshId2_name" >
+      <mesh>
+        <source id="meshId2-positions" name="meshId2-positions">
+          <float_array id="meshId2-positions-array" count="27"> 0 0.0012 0.0642 0 -0.0034 0.0642 0 -0.0076 0.0642 0 -0.0108 0.0642 0 -0.0136 0.0642 0 -0.0168 0.0642 0 -0.02 0.0642 0 -0.0222 0.0642 0 -0.0238 0.0642 </float_array>
+          <technique_common>
+            <accessor count="9" offset="0" source="#meshId2-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="meshId2-normals" name="meshId2-normals">
+          <float_array id="meshId2-normals-array" count="27"> -nan -nan nan -nan -nan nan -nan -nan nan -nan -nan nan -nan -nan nan -nan -nan nan -nan -nan nan -nan -nan nan -nan -nan nan </float_array>
+          <technique_common>
+            <accessor count="9" offset="0" source="#meshId2-normals-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="meshId2-tex0" name="meshId2-tex0">
+          <float_array id="meshId2-tex0-array" count="18"> 0.5 1 0.5 0.816 0.5 0.648 0.5 0.52 0.5 0.408 0.5 0.28 0.5 0.152 0.5 0.064 0.5 0 </float_array>
+          <technique_common>
+            <accessor count="9" offset="0" source="#meshId2-tex0-array" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId2-vertices">
+          <input semantic="POSITION" source="#meshId2-positions" />
+          <input semantic="NORMAL" source="#meshId2-normals" />
+          <input semantic="TEXCOORD" source="#meshId2-tex0"  />
+        </vertices>
+        <lines count="8" material="defaultMaterial">
+          <input offset="0" semantic="VERTEX" source="#meshId2-vertices" />
+          <p>1 0 2 1 3 2 4 3 5 4 6 5 7 6 8 7 </p>
+        </lines>
+      </mesh>
+    </geometry>
+    <geometry id="meshId3" name="meshId3_name" >
+      <mesh>
+        <source id="meshId3-positions" name="meshId3-positions">
+          <float_array id="meshId3-positions-array" count="6"> -0.0501 0.00015 0.0732 -0.050158 0.00015 0.0732 </float_array>
+          <technique_common>
+            <accessor count="2" offset="0" source="#meshId3-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="meshId3-normals" name="meshId3-normals">
+          <float_array id="meshId3-normals-array" count="6"> -nan -nan nan -nan -nan nan </float_array>
+          <technique_common>
+            <accessor count="2" offset="0" source="#meshId3-normals-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId3-vertices">
+          <input semantic="POSITION" source="#meshId3-positions" />
+          <input semantic="NORMAL" source="#meshId3-normals" />
+        </vertices>
+        <lines count="1" material="defaultMaterial">
+          <input offset="0" semantic="VERTEX" source="#meshId3-vertices" />
+          <p>1 0 </p>
+        </lines>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="<LWORoot>" name="<LWORoot>">
+      <node id="Pivot-Layer_0" name="Pivot-Layer_0">
+        <matrix>1 0 -0 0 0 1 -0 0 -0 -0 1 -0 0 0 -0 1</matrix>
+        <node id="Layer_0" name="Layer_0">
+          <matrix>1 0 -0 -0 0 1 -0 -0 -0 -0 1 0 0 0 -0 1</matrix>
+          <instance_geometry url="#meshId0">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="defaultMaterial" target="#m0Bone" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="Pivot-Layer_0" name="Pivot-Layer_0">
+        <matrix>1 0 -0 0 0 1 -0 0 -0 -0 1 -0 0 0 -0 1</matrix>
+        <node id="Layer_0" name="Layer_0">
+          <matrix>1 0 -0 -0 0 1 -0 -0 -0 -0 1 0 0 0 -0 1</matrix>
+          <instance_geometry url="#meshId1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="defaultMaterial" target="#m0Bone" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="Pivot-Layer_0" name="Pivot-Layer_0">
+        <matrix>1 0 -0 0 0 1 -0 0 -0 -0 1 -0 0 0 -0 1</matrix>
+        <node id="Layer_0" name="Layer_0">
+          <matrix>1 0 -0 -0 0 1 -0 -0 -0 -0 1 0 0 0 -0 1</matrix>
+          <instance_geometry url="#meshId2">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="defaultMaterial" target="#m1probeEXT" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="Pivot-Layer_0" name="Pivot-Layer_0">
+        <matrix>1 0 -0 0 0 1 -0 0 -0 -0 1 0.055 0 0 -0 1</matrix>
+        <node id="Layer_0" name="Layer_0">
+          <matrix>1 0 -0 -0 0 1 -0 -0 -0 -0 1 -0.055 0 0 -0 1</matrix>
+          <instance_geometry url="#meshId3">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="defaultMaterial" target="#m2skin" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#<LWORoot>" />
+  </scene>
+</COLLADA>
